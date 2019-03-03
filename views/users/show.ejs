@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+<div class="row">
+	<div class="col-md-4">
+		<div class="thumbnail">
+			<h1><%= user.firstName + " " + user.lastName %></h1>
+			<img src="<%= user.avatar %>" alt="user profile image">
+			<div class="caption"> <a href="mailto:<%= user.email %>"><%= user.email %></a>
+			</div>
+		adsfdsfadf asdf af adf dsafa fda sfda sf sad fa fds fasfa f af wer wf d  dsafa e f da aew fe d
+	asdf dsaffasdfasd asd fsad fsa ewfrew f dsf dsfsa fdsa fa f dsafadsfdsfadf asdf af adf dsafa fda sfda sf sad fa fds fasfa f af wer wf d  dsafa e f da aew fe d
+	asdf dsaffasdfasd asd fsad fsa ewfrew f dsf dsfsa fdsa fa f dsafadsfdsfadf asdf af adf dsafa fda sfda sf sad fa fds fasfa f af wer wf d  dsafa e f da aew fe d
+	asdf dsaffasdfasd asd fsad fsa ewfrew f dsf dsfsa fdsa fa f dsafadsfdsfadf asdf af adf dsafa fda sfda sf sad fa fds fasfa f af wer wf d  dsafa e f da aew fe d
+	asdf dsaffasdfasd asd fsad fsa ewfrew f dsf dsfsa fdsa fa f dsafadsfdsfadf asdf af adf dsafa fda sfda sf sad fa fds fasfa f af wer wf d  dsafa e f da aew fe d
+	asdf dsaffasdfasd asd fsad fsa ewfrew f dsf dsfsa fdsa fa f dsaf
+		</div>
+	</div>
+	<div class="col-md-8">
+		<h3><%= user.username %>'s campgrounds:</h3>
+		<ul>
+			<% campgrounds.forEach(function(campground) { %>
+			<li><a href="/campgrounds/<%=campground.id %>"><%= campground.name %></a></li>
+			<% }); %>
+		</ul>
+	</div>
+</div>
+
+
+<% include ../partials/footer %>
