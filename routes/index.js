@@ -182,7 +182,7 @@ router.post('/reset/:token', function(req, res) {
 					}
 				});
 				var mailOptions = {
-					to: user.mail,
+					to: user.email,
 					from: 'kevin.wongt1@gmail.com',
 					subject: 'Your password has been changed',
 					text:
