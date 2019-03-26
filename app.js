@@ -1,5 +1,3 @@
-//require('dotenv').config();
-
 var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
@@ -13,6 +11,8 @@ var express = require('express'),
 	Comment = require('./models/comment'),
 	User = require('./models/user'),
 	seedDB = require('./seeds');
+
+require('dotenv').config();
 
 //requiring routes
 var commentRoutes = require('./routes/comments'),
@@ -59,6 +59,6 @@ app.use('/', indexRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
-app.listen(3000, process.env.IP, function() {
+app.listen(process.env.PORT, process.env.IP, function() {
 	console.log('YelpCamp Server has Started');
 });
